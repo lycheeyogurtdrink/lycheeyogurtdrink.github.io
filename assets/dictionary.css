@@ -1,0 +1,288 @@
+/*
+orange: rgba(255, 233, 211,0.85) or rgb(255, 242, 229)
+green: rgba(241,255,241,0.85) (#f1fff1)*/
+
+body {
+	background-attachment:fixed;
+	background-size:100%;
+	margin:0;
+	padding:0;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+#container {
+	position:relative;
+	font-family:'Noto Serif';
+	width:66%;
+	margin-top:30px;
+	margin-left:17%;
+	margin-bottom:50px;
+	/*padding:50 50 50 50;*/
+}
+
+#pagecontent {
+	padding: 50 30 50 30;
+	border: 2px solid #aaa;
+	color:#222;
+	background-color: #fefefe;
+}
+
+/* Dictionary navigation bar */
+#dictnav {
+	text-align:center;
+	display: flex;
+	position:sticky;
+	top:0;
+	/*top:89.5;*/
+	margin: 0 0 0 0;
+	justify-content:center;
+	z-index:1;
+	padding:0 0 0 0;
+	/*background-color:#efefef;*/
+	width:100%;
+	/*box-shadow: 0px 5px 15px #ccc;*/
+}
+
+#dictnav a {
+	/*margin-right: 5px;*/
+	font-size: 24px;
+	font-weight: 600;
+	font-family:'Noto Serif';
+	/*width:calc(100%/23);*/
+	flex:1;
+	line-height:50px;
+	/*border: 2px solid black;*/
+	border-bottom:1px solid #aaa;
+	/*border-top:1px solid #000;*/
+	text-decoration:none;
+	color: #333;
+	vertical-align:middle;
+	transition: 300ms;
+	background-image: linear-gradient(#fefefe 0%,#eee 85%,#ddd 100%);
+	background-color:#fafafa;
+	border-right:1px solid #aaa;
+}
+
+#dictnav a:hover {
+	background-color: #fff;
+	/*background-image:none;*/
+	background-image:linear-gradient(#aaa 0%,#ccc 10%,#ddd 100%);
+	color:#000;
+}
+
+/*Search bar*/
+#searchBar {
+	position:sticky;
+	top:70px;
+	margin-top: 20px;
+	justify-content:right;
+	margin-right:2px;
+	padding-right:5px;
+	padding-left:8px;
+	float:right;
+	width:17%;
+}
+
+#searchBar input {
+	margin-bottom:5px;
+	margin-top:5px;
+}
+
+#searchBar * {
+	font-family:'Noto Serif';
+}
+
+#searchresultsdiv {
+	overflow-y:auto;
+	height:auto;
+	max-height:75%;
+	border: 2px solid #aaa;
+	background:white;
+}
+
+#searchresults {
+	list-style-type:none;
+	margin:0;
+	padding:0 0 7 7;
+}
+
+#searchresults li {
+	margin-top:5px;
+}
+
+.resultLex {
+	font-size:15;
+	font-weight:700;
+}
+
+.resultLex a:link, .resultLex a:visited {
+	text-decoration:none;
+	color: #9e2e2e;
+}
+
+.resultLex a:hover {
+	color: #4f1717;
+}
+
+.resultLex b {
+	color: #772222;
+}
+
+.resultDef {
+	font-size:13;
+}
+
+/* Content headers and formatting */
+#pagetitle {
+	width:100%;
+	text-align:center;
+	font-size:48px;
+	font-weight:600;
+	/*margin-bottom:30px;*/
+}
+
+#pagecontent h2 {
+	font-size:24px;
+	font-weight:700;
+	font-style:normal;
+	margin: 10 0 10 0;
+}
+
+/* Dictionary-specific styling since dictionary navbar is wider than text*/
+#intro {
+	margin-top:20px;
+	/*margin-left:10%;*/
+	/*margin-right:10%;*/
+	margin-bottom:0px;
+	/*border: 2px solid #aaa;*/
+	padding: 10 50 10 50;
+	/*box-shadow: 0px 5px 15px #eaeaea;*/
+	/*background-color: white;*/
+}
+
+#intro ul {
+	padding-left:0px;
+	margin-left:10px;
+	list-style-type:disc;
+}
+
+.anchor {
+	position:relative;
+	display:block;
+	top:-120px;
+	/*visibility:hidden;*/
+}
+
+.defAnchor {
+	position:relative;
+	display:block;
+	top:-60px;
+	/*visibility:hidden;*/
+}
+
+.letter {
+	text-align:center;
+	font-size:36px;
+	line-height:0.8;
+	position:relative;
+	font-weight:600;
+	margin-bottom:20px;
+}
+
+.letter:before, .letter:after {
+	content:"0";
+	background-color:#555;
+	position:absolute;
+	top: 51%;
+	overflow: hidden;
+	width: 50%;
+	height:1.5px;
+}
+
+.letter:before {
+	margin-left: -51%;
+	text-align: right;
+}
+
+.letter:after {
+	margin-left: 1%;
+}
+
+.entry {
+	/*margin-left:10%;*/
+	/*padding-right:10%;*/
+	margin-left:10px;
+	margin-top:7.5;
+}
+
+.word {
+	font-size:18px;
+	font-weight:700;
+	margin: 0 10 0 0;
+	color:#752222;
+}
+
+.definition {
+	font-size:16px;
+	font-weight:400;
+	color:black;
+}
+
+.definition a:link, .definition a:visited {
+	font-weight:bold;
+	font-style:italic;
+	text-decoration:none;
+	color:#444;
+}
+
+.definition a:hover {
+	font-weight:bold;
+	text-decoration:none;
+	color:#777;
+}
+
+.derivation {
+	margin: 10 0 0 60;
+}
+
+.derivation:before {
+	content:"â¨½"; /* â¨½ */
+	font-size:36;
+	font-weight:100;
+	position:absolute;
+	text-align:right;
+	margin-left: -30px;
+	margin-top: -18px;
+	color:#333;
+}
+
+.example {
+	font-weight:600;
+	font-size:16px;
+	margin: 10 20 0 20;
+	font-style:italic;
+	color:#121263;
+}
+
+.exampletranslation {
+	font-size:16px;
+	font-style:italic;
+	margin: 0 0 0 20;
+	color:#121263;
+}
+
+.highlight {
+	font-weight:750;
+	color:#08082b;
+}
+
+/*Footer*/
+footer {
+	font-size:12px;
+	font-style:italic;
+	margin-top:20px;
+	text-align:center;
+}
