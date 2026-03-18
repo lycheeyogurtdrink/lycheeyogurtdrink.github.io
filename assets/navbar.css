@@ -1,0 +1,56 @@
+/* Sitenav bar */
+header {
+	/*position:sticky;*/
+	top:0;
+	font-family:Georgia;
+	width:100%;
+	padding:10 0 10 15;
+	border-bottom:1px solid #aaa;
+	/*background-color:#fafafa;*/
+	background-image:linear-gradient(#fefefe 0%,#eee 93%,#ddd 100%);
+	z-index:1;
+	overflow:hidden;
+}
+
+header h1 {
+	font-size:64px;
+	margin-bottom:-12;
+	font-weight:500;
+	pointer-events:none;
+	padding-bottom:5;
+}
+
+header img {
+	margin-bottom:5;
+}
+
+header h2 {
+	font-size:48px;
+	font-style:italic;
+	font-weight:lighter;
+	margin-bottom:0;
+	font-weight:100;
+	pointer-events:none;
+	margin-left:15px;
+	padding-left:15px;
+	border-left:2px solid #ccc;
+}
+
+header img {
+	margin-right: 10px;
+	pointer-events:none;
+}
+
+header td {
+	vertical-align:bottom;
+}
+
+.navlinks {
+	font-size:28;
+	padding-right:15px;
+}
+
+.navlinks a {
+	border-left:2px solid #ccc;
+	padding-left:15px;
+}
